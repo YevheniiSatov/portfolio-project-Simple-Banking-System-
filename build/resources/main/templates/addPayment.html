@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Payment</title>
+
+</head>
+<body>
+<h1>Add Payment</h1>
+<form action="/bank/addPayment" method="post">
+    <label for="paymentType">Payment Type:</label>
+    <input type="text" id="paymentType" name="paymentType" required><br>
+    <label for="amount">Amount:</label>
+    <input type="number" step="0.01" id="amount" name="amount" required><br>
+    <label for="accountId">Account:</label>
+    <select id="accountId" name="accountId" required>
+        <option th:each="account : ${accounts}" th:value="${account.id}" th:text="${account.accountNumber}"></option>
+    </select><br>
+    <button type="submit">Add Payment</button>
+</form>
+<a href="/">Back to Home</a>
+<div th:if="${message}" th:text="${message}"></div>
+</body>
+</html>
