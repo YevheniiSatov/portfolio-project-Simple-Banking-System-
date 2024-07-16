@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Client</title>
+
+</head>
+<body>
+<h1>Add Client</h1>
+<form action="/bank/addClient" method="post">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" required><br>
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" required><br>
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required><br>
+    <label for="postalCode">Postal Code:</label>
+    <input type="text" id="postalCode" name="postalCode" required><br>
+    <button type="submit">Add Client</button>
+</form>
+<a href="/">Back to Home</a>
+<div th:if="${message}" th:text="${message}"></div>
+</body>
+</html>

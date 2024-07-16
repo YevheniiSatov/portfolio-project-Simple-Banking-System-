@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Generate Report</title>
+
+</head>
+<body>
+<h1>Generate Report</h1>
+<form action="/bank/generateReport" method="post">
+    <label for="startDate">Start Date:</label>
+    <input type="date" id="startDate" name="startDate" required><br>
+    <label for="endDate">End Date:</label>
+    <input type="date" id="endDate" name="endDate" required><br>
+    <button type="submit">Generate Report</button>
+</form>
+<a href="/">Back to Home</a>
+<div th:if="${message}" th:text="${message}"></div>
+</body>
+</html>
